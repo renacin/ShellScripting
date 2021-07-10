@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Date: 06/09/2021
 # Title: Learning Bash Scripting #1 - The Basics
@@ -11,6 +11,8 @@
 # Refer to variables with the $ symbol
 # ---------------------------------------------------------
 
+
+
 : <<'COMMENTS'
 
 echo "What is your name?"
@@ -18,6 +20,7 @@ read user_name
 echo "Hello, $user_name"
 
 COMMENTS
+
 
 
 # -------------PRINTING, USER INPUT, VARIABLES-------------
@@ -40,6 +43,8 @@ COMMENTS
 #       + DATE - Current Date Information
 # ---------------------------------------------------------
 
+
+
 : <<'COMMENTS'
 
 echo "Algorithm 3000 Application"
@@ -57,6 +62,7 @@ echo "CUR_OS: $OSTYPE"
 COMMENTS
 
 
+
 # -------------TAKING ARGs FROM COMMAND LINE---------------
 # With the filename, a bash script can take add args
 # Examples:
@@ -66,6 +72,8 @@ COMMENTS
 #       + $@ - Add Args As An Array
 # ---------------------------------------------------------
 
+
+
 : <<'COMMENTS'
 
 file_name="$0"
@@ -74,6 +82,7 @@ num_args="$#"
 echo "Filename: $file_name | # Of Add Args: $num_args | Add Args: [$args]"
 
 COMMENTS
+
 
 
 # -------------Information From Other Commands-------------
@@ -87,14 +96,60 @@ COMMENTS
 #       + read -sp "" var --> gives prompt, silent var
 # ---------------------------------------------------------
 
+
+
+: <<'COMMENTS'
+
 read -p "Username: " username
 read -s -p "Password: " password
 echo
-
 
 echo
 echo "Hello $username, here are the contents of your directory"
 dir_contents=$(ls)
 echo "Items In Dir: $dir_contents"
+
+COMMENTS
+
+
+
+# ----------------------SLEEP------------------------------
+# Using the sleep unction you can pause the script
+# Examples:
+#       + sleep number prefix
+#       + sleep 5m
+#       + sleep 1h 30m 30s
+# ---------------------------------------------------------
+
+
+
+: << 'COMMENTS'
+
+echo "Im going to do some calculations"
+sleep 5s
+echo "All done!"
+
+COMMENTS
+
+
+
+# ----------------------BASIC ARITHMATIC-------------------
+# Must be done within two sets of parentheses
+# General format: sum=$((10+2))
+# Operators:
+#       + All that you know and more
+# ---------------------------------------------------------
+
+
+echo "Welcome to the addition calculator"
+read -p "First Number: " first_number
+read -p "Second Number: " second_number
+
+result=$(($first_number + $second_number))
+echo "$result"
+
+
+
+
 
 
