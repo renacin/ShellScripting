@@ -57,10 +57,12 @@
 #       + $# - Number Of Add Arg
 #       + $@ - Add Args As An Array
 # ---------------------------------------------------------
-echo "File Name: $0"
-echo "# Of Add Args: $#, Add Args: [$@]"
 
+file_name="$0"
+args="$@"
+num_args="$#"
 
+echo "Filename: $file_name | # Of Add Args: $num_args | Add Args: [$args]"
 
 
 
