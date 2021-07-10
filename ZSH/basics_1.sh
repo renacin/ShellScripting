@@ -9,10 +9,13 @@
 # Refer to variables with the $ symbol
 # ---------------------------------------------------------
 
-# echo "What is your name?"
-# read user_name
-# echo "Hello, $user_name"
+: <<'COMMENTS'
 
+echo "What is your name?"
+read user_name
+echo "Hello, $user_name"
+
+COMMENTS
 
 
 # -------------PRINTING, USER INPUT, VARIABLES-------------
@@ -35,18 +38,21 @@
 #       + DATE - Current Date Information
 # ---------------------------------------------------------
 
-# echo "Algorithm 3000 Application"
-# echo "Please Enter Username"
-# read username
-# echo "Please Enter Password"
-# read password
-# echo "Username: $username, Password: $password"
+: <<'COMMENTS'
 
-# echo "It is currently: $(date)"
-# echo "Username: $USERNAME"
-# echo "HOME_DIR: $HOME, WORKING_DIR: $PWD"
-# echo "CUR_OS: $OSTYPE"
+echo "Algorithm 3000 Application"
+echo "Please Enter Username"
+read username
+echo "Please Enter Password"
+read password
+echo "Username: $username, Password: $password"
 
+echo "It is currently: $(date)"
+echo "Username: $USERNAME"
+echo "HOME_DIR: $HOME, WORKING_DIR: $PWD"
+echo "CUR_OS: $OSTYPE"
+
+COMMENTS
 
 
 # -------------TAKING ARGs FROM COMMAND LINE---------------
@@ -58,11 +64,47 @@
 #       + $@ - Add Args As An Array
 # ---------------------------------------------------------
 
+: <<'COMMENTS'
+
 file_name="$0"
 args="$@"
 num_args="$#"
-
 echo "Filename: $file_name | # Of Add Args: $num_args | Add Args: [$args]"
+
+COMMENTS
+
+
+# -------------Information From Other Commands-------------
+# You can create a variable with information from another
+# command.
+# Example:
+#       + $(ls) - Stores the information of ls inside a var
+
+# Notes:
+#       + read -p "" var  --> gives prompt, sets var
+#       + read -sp "" var --> gives prompt, silent var
+# ---------------------------------------------------------
+
+read -p "Username: " username
+read -s -p "Password: " password
+echo
+
+
+echo
+echo "Hello $username, here are the contents of your directory"
+dir_contents=$(ls)
+echo "Items In Dir: $dir_contents"
+
+
+
+
+
+
+
+
+
+
+
 
 
 
