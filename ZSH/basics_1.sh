@@ -19,18 +19,50 @@
 # Ask the user for a username & password
 # Prefix variables with $ when reading or printing
 # Leave off $ when setting a variable name with a value
+
 # No need for quotation marks when setting string variables
 # Variables are untyped, no need to define them
+
+# Two types of bash variables, system def & user def
+# Examples:
+#       + Bash - Version Of Bash
+#       + COLUMNS - Columns In Shell Window
+#       + HOME - Home Directory Of Computer
+#       + LOGNAME - Logging Current Username
+#       + OSTYPE - Current Operating System Type
+#       + PWD - Workign Directory
+#       + USERNAME - Current USERNAME
+#       + DATE - Current Date Information
 # ---------------------------------------------------------
 
-echo "Algorithm 3000 Application"
+# echo "Algorithm 3000 Application"
+# echo "Please Enter Username"
+# read username
+# echo "Please Enter Password"
+# read password
+# echo "Username: $username, Password: $password"
 
-echo "Please Enter Username"
-read username
-echo "Please Enter Password"
-read password
+# echo "It is currently: $(date)"
+# echo "Username: $USERNAME"
+# echo "HOME_DIR: $HOME, WORKING_DIR: $PWD"
+# echo "CUR_OS: $OSTYPE"
 
-echo "Username: $username, Password: $password"
+
+
+# -------------TAKING ARGs FROM COMMAND LINE---------------
+# With the filename, a bash script can take add args
+# Examples:
+#       + $0 - Filename
+#       + $1-$9 - Add Args
+#       + $# - Number Of Add Arg
+#       + $@ - Add Args As An Array
+# ---------------------------------------------------------
+echo "File Name: $0"
+echo "# Of Add Args: $#, Add Args: [$@]"
+
+
+
+
 
 
 
