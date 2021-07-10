@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Date: 06/09/2021
 # Title: Learning Bash Scripting #1 - The Basics
 
@@ -94,19 +96,5 @@ echo
 echo "Hello $username, here are the contents of your directory"
 dir_contents=$(ls)
 echo "Items In Dir: $dir_contents"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
