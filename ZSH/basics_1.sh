@@ -185,6 +185,8 @@ COMMENTS
 # esac
 # ---------------------------------------------------------
 
+: <<'COMMENTS'
+
 echo "Enter Credentials Below"
 read -p "Username: " username
 
@@ -199,6 +201,34 @@ case $username in
         echo "Warning Unknown User: $username"
         ;;
 esac
+
+COMMENTS
+
+
+
+# ---------------MORE CONTROL FLOW STATEMENTS--------------
+# Loops are yet another important way to determine the 
+# behaviour of code. The most basic loop is the while loop.
+# In this loop, code will continue until a condition has been
+# met. Be careful of the conditions you state!
+#
+# Example:
+# while [expression]; do
+#       command
+# done
+# ---------------------------------------------------------
+
+read -p "Please Enter A Number: " num_print
+while [ $num_print -ge 0 ]; do
+    echo "Current Value: $num_print"
+    ((num_print=num_print-1))
+done
+echo "All done!"
+
+
+
+
+
 
 
 
