@@ -140,6 +140,7 @@ COMMENTS
 #       + All that you know and more
 # ---------------------------------------------------------
 
+: << 'COMMENTS'
 
 echo "Welcome to the addition calculator"
 read -p "First Number: " first_number
@@ -147,6 +148,38 @@ read -p "Second Number: " second_number
 
 result=$(($first_number + $second_number))
 echo "$result"
+
+COMMENTS
+
+
+
+# --------------CONTROL FLOW STATEMENTS--------------------
+# Like any other program Bash allows you to 
+# Notes:
+#       + 
+# ---------------------------------------------------------
+
+
+echo "Sign In To Database"
+read -p "Username: " username
+read -p "Password: " password
+
+if ["${username}" == "Renacin"] && ["${password}" == "Matadeen"]; then
+    echo "Signed In"
+else
+    echo "Wrong Password"
+fi
+
+
+
+
+
+
+
+
+
+
+
 
 
 
