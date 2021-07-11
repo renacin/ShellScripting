@@ -4,14 +4,10 @@
 # Title: Learning Bash Scripting #1 - The Basics
 
 
-
-
 # ----------------PRINTING, USER INPUT---------------------
 # echo is similar to print in Python, read similar to input
 # Refer to variables with the $ symbol
 # ---------------------------------------------------------
-
-
 
 : <<'COMMENTS'
 
@@ -43,8 +39,6 @@ COMMENTS
 #       + DATE - Current Date Information
 # ---------------------------------------------------------
 
-
-
 : <<'COMMENTS'
 
 echo "Algorithm 3000 Application"
@@ -72,8 +66,6 @@ COMMENTS
 #       + $@ - Add Args As An Array
 # ---------------------------------------------------------
 
-
-
 : <<'COMMENTS'
 
 file_name="$0"
@@ -95,8 +87,6 @@ COMMENTS
 #       + read -p "" var  --> gives prompt, sets var
 #       + read -sp "" var --> gives prompt, silent var
 # ---------------------------------------------------------
-
-
 
 : <<'COMMENTS'
 
@@ -120,8 +110,6 @@ COMMENTS
 #       + sleep 5m
 #       + sleep 1h 30m 30s
 # ---------------------------------------------------------
-
-
 
 : << 'COMMENTS'
 
@@ -154,31 +142,60 @@ COMMENTS
 
 
 # --------------CONTROL FLOW STATEMENTS--------------------
-# Like any other program Bash allows you to 
+# Like any other program Bash allows you to add some control
+# logic to your program. Like other languages you can use
+# if, elif, and else statements.
 # Notes:
-#       + 
+#       + Unlike most languages Bash needs a finish statement
+#           to indiacte the end of the control flow structure
+#       + Be mindful of spaces within condition statements!
+#       + You can shain conditions together with &&, || and
+#           other statements
 # ---------------------------------------------------------
 
+: << 'COMMENTS'
 
 echo "Sign In To Database"
 read -p "Username: " username
 read -p "Password: " password
+echo
 
-if ["${username}" == "Renacin"] && ["${password}" == "Matadeen"]; then
-    echo "Signed In"
+if [[ $username == "Renacin" || $username == "Ren" || $username == "ren" ]] && [[ $password == "Matadeen" || $password == "mat" ]]; then
+    echo "Welcome Renacin!"
 else
-    echo "Wrong Password"
+    echo "Unknown Login!"
 fi
 
+COMMENTS
 
 
 
+# ---------------MORE CONTROL FLOW STATEMENTS--------------
+# Basic If, Elif, and Else statements are useful, however
+# in situtations where entries are highly variable math-case
+# are more efficient, as well as much more readable
+# Follows this format:
+# case $User_Input in
+#   Renacin|Ren|renacin|ren)
+#       echo "Hey Renacin!"
+#       ;;
+#   *)
+#       echo "You aren't Ren!"
+#       ;;
+# esac
+# ---------------------------------------------------------
 
+echo "Enter Credentials Below"
+read -p "Username: " username
 
-
-
-
-
+case $username in
+    Renacin|renacin|Ren|ren)
+        echo "Welcome back Ren"
+        ;;
+    *)
+        echo "Welcome $username, you are a new user"
+        ;;
+esac
 
 
 
