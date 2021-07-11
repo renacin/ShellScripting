@@ -190,10 +190,13 @@ read -p "Username: " username
 
 case $username in
     Renacin|renacin|Ren|ren)
-        echo "Welcome back Ren"
+        echo "Welcome Back Ren!"
+        echo "Performing A Network Test Before We Continue"
+        echo
+        ping -c 10 -q www.renacin.com
         ;;
     *)
-        echo "Welcome $username, you are a new user"
+        echo "Warning Unknown User: $username"
         ;;
 esac
 
