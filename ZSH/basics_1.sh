@@ -218,6 +218,8 @@ COMMENTS
 # done
 # ---------------------------------------------------------
 
+: <<'COMMENTS'
+
 read -p "Please Enter A Number: " num_print
 while [ $num_print -ge 0 ]; do
     echo "Current Value: $num_print"
@@ -225,8 +227,25 @@ while [ $num_print -ge 0 ]; do
 done
 echo "All done!"
 
+COMMENTS
 
 
+# ---------------MORE CONTROL FLOW STATEMENTS--------------
+# Loops are yet another important way to determine the 
+# behaviour of code. The most basic loop is the while loop.
+# In this loop, code will continue until a condition has been
+# met. Be careful of the conditions you state!
+#
+# Example:
+# for x in range; do
+#       echo 
+# done
+# ---------------------------------------------------------
+
+read -p "Please Enter A Number: " num_print
+for ((i=1;1<=$num_print;i++)); do
+    echo "$num"
+done
 
 
 
