@@ -242,10 +242,14 @@ COMMENTS
 # done
 # ---------------------------------------------------------
 
+: <<'COMMENTS'
+
 read -p "Please Enter A Number: " num_print
 for ((i=1; 1<=10; i++)); do
     echo "$num"
 done
+
+COMMENTS
 
 
 

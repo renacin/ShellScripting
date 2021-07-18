@@ -1,0 +1,78 @@
+# 06/24/2021
+# Notes On VIM
+# Renacin Matadeen
+
+
+Vim Modes:
+    + Normal Mode [ESC]
+        - vim always starts in this mode
+        - mostly for moving around and navigating files
+        - general moving         [ARROW KEYS] or [H, J, K, L]
+        - move to next paragraph [SHIFT + }]
+    
+    + Insert Mode [i]
+        - can add or remove things from files
+
+    + Visual Mode [v]
+        - is used for selection of text, similar to how a mouse works
+        - in visual mode select the text that you would like to query:
+            + delete selection   [d]
+            + copy selection     [y]
+            + paste selection    [p]
+            + indent selection   [>]
+            + de-indent selection [<]
+            + make all uppercase [U]
+            + make all lowercase [u]
+
+    + Replace Mode [R]
+        - is used to replace character in document
+
+
+Vim Modes:
+    + Normal Mode [ESC]
+        - vim always starts in this mode
+        - mostly for moving around and navigating files
+        - general moving         [ARROW KEYS] or [H, J, K, L]
+        - move to next paragraph [SHIFT + }]
+    
+    + Insert Mode [i]
+        - can add or remove things from files
+
+    + Visual Mode [v]
+        - is used for selection of text, similar to how a mouse works
+        - in visual mode select the text that you would like to query:
+            + delete selection   [d]
+            + copy selection     [y]
+            + paste selection    [p]
+            + indent selection   [>]
+            + de-indent selection [<]
+            + make all uppercase [U]
+            + make all lowercase [u]
+
+    + Replace Mode [r]
+        - find and replace character in this mode
+
+NERDTree Navigation:
+    + move tabs left            --> [ctrl + ww]
+    + open new nerd-tree window  --> [ctrl + n]
+    + close nerd-tree            --> [:q]
+    + move to bookmark          --> [: shift + B] + nav2bookmark + enter
+    + remove a bookmark         --> open bookmark window + [shift + D]
+    + create a bookmark         --> nav2dir + [:bookmark name]
+
+
+NERDTree Split Window:
+    + Open Window In VertSplit  --> [:s]
+        - Edit multiple documents in this mode
+
+
+NERDTree Navigation:
+    + move tabs left            --> [ctrl + ww]
+    + open new nerd-tree window  --> [ctrl + n]
+    + close nerd-tree            --> [:q]
+    + move to bookmark          --> [: shift + B] + nav2bookmark + enter
+    + remove a bookmark         --> open bookmark window + [shift + D]
+    + create a bookmark         --> nav2dir + [:bookmark name]
+   
+
+
